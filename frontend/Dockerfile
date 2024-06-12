@@ -13,8 +13,8 @@ RUN npm install
 # Copia el resto de los archivos del proyecto al contenedor
 COPY . .
 
-# Expone el puerto 3001 (o el puerto que tu backend utilice)
-EXPOSE 3001
+# Expone el puerto 5173 (puerto predeterminado de Vite)
+EXPOSE 5173
 
 # Comando por defecto para ejecutar la aplicación
-CMD ["node", "server.js"]
+CMD ["npm", "run", "dev", "--", "--host"]
